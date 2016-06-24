@@ -18,10 +18,11 @@ export class ContactsListComponent implements OnInit {
   private contacts: Contact[];
 
 
-  constructor(private _http: Http, private contactsService: ContactsService) {
-    this.contacts = contactsService.fetch();
+  constructor(private contactsService: ContactsService) {
+      contactsService.fetch().subscribe(res => this.contacts = res);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }

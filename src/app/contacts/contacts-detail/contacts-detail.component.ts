@@ -14,13 +14,13 @@ import { Contact } from '../../models/contact';
   providers: [ContactsService]
 })
 export class ContactsDetailComponent implements OnInit {
-  private contact: Contact;
+  private contact: Observable<Contact>;
 
   constructor(private _route: ActivatedRoute, private _http: Http, private contactsService: ContactsService) {
   }
 
   ngOnInit() {
-    this.contact = this.contactsService.fetchOne(this._route.snapshot.params['id']);
+    //this.contact = this.contactsService.fetchOne(this._route.snapshot.params['id']);
   }
 
 }
