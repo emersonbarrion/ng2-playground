@@ -20,13 +20,7 @@ export class ContactsService {
   }
   
   fetchOne(id) {
-      /*for (let i = 0; i < this.contacts.length; i++) {
-          if(this.contacts[i].id == id) {
-              return this.contacts[i];
-          }
-      }*/
-      //return this.contacts.find(res => res.id == id);
-      /*return this.http.get('app/contacts.json').map((res) => {
+      return this.http.get('app/contacts.json').map((res) => {
           let contactList = res.json().items;
 
           for (let i = 0; i < contactList.length; i++) {
@@ -39,6 +33,6 @@ export class ContactsService {
                 };
               }
           }
-        });*/
+        });
   }
 }
